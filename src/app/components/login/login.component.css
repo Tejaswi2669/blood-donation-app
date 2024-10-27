@@ -1,0 +1,15 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .invalid-feedback {
+    color: red;
+    font-size: 0.875em;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

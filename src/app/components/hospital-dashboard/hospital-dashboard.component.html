@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Available Donors</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Blood Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donor of donors">
+          <td>{{ donor.name }}</td>
+          <td>{{ donor.email }}</td>
+          <td>{{ donor.bloodType }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="requestDonation(donor)">Request Donation</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
