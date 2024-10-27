@@ -8,18 +8,25 @@ import { User } from '../models/Users';
   providedIn: 'root'
 })
 export class UserService {
-  getAllDonors():Observable<User> {
-    throw new Error('Method not implemented.');
-  }
   private baseUrl = 'http://localhost:8080/api/users';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   register(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/register`, user);
+    return this.http.post(`${this.baseUrl}/register`, user, { responseType: 'text' });
   }
 
   login(credentials: { email: string, password: string }): Observable<any> {
-    return this.http.post(`${this.baseUrl}/login`, credentials);
+    return this.http.post(`${this.baseUrl}/login`, credentials, { responseType: 'text' });
+  }
+  
+
+
+  findByEmail(email: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/email/${email}`, { responseType: 'text' });
+  }
+
+  getAllDonors(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/donors`, { responseType: 'text' });
   }
 }

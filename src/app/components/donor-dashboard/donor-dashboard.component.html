@@ -1,1 +1,15 @@
-<p>donor-dashboard works!</p>
+<div class="container">
+    <h2>Donation History</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Donation Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donation of donations">
+          <td>{{ donation.donationDate | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

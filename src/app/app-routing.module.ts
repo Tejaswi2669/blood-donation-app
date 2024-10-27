@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { DonorDashboardComponent } from './components/donor-dashboard/donor-dashboard.component';
 import { HospitalDashboardComponent } from './components/hospital-dashboard/hospital-dashboard.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
